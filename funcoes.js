@@ -268,9 +268,7 @@ function resultado(_nome) {
     let btn = document.createElement('button');
     btn.setAttribute('id', 'button');
     btn.setAttribute('class', 'div');
-    btn.innerHTML='<a id="novamente">Jogue novamente!</a>';
+    btn.innerHTML='<a id="novamente" href="index.html">Jogue novamente!</a>';
     document.getElementById('result').appendChild(btn);
-    $('#novamente').one('click',function(){
-        history.pushState('teste','Titulo de teste','/teste');
-    });
+    
 }
