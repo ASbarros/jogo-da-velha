@@ -1,0 +1,75 @@
+html, body{
+    height: 98%;
+}
+input{
+    height: 10px;
+}
+circle{
+    fill: none;
+    stroke: rgb(170, 47, 47);
+    stroke-width: 3%;
+}
+line{
+    stroke-linecap: round;
+    stroke: rgb(27, 27, 27);
+}
+/*classe*/
+.div{
+    border-radius: 20px;
+}
+.linha{
+    stroke-width: 3%;
+}
+.circulo{
+    stroke-width: 1%;
+}
+.x{
+    stroke-width: 1%;
+    stroke: blue;
+}
+
+/*id*/
+#linhaPergunta-svg, #linhaPergunta2-svg{
+    stroke: blue;
+}
+#conteiner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(219, 219, 219);
+    height: 100%;
+    width: 100%;
+}
+#tabuleiro{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(197, 197, 197);
+}
+#pergunta{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(165, 164, 164);
+}
+#result{
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    background-color: rgb(66, 66, 66);
+    width: 80%;
+    height: 80%;
+    z-index: 50;
+    opacity: .9;
+    text-align: center;
+    font-size: 50px;
+}
+#text{
+    color: rgb(89, 245, 89);
+    width: 100%;
+    height: 10%;
+    opacity: 1;
+    margin-top: 20%;
+}
+#button{
+    width: 20%;
+    height: 10%;
+}
