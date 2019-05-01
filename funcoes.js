@@ -121,24 +121,30 @@ function createX(x, y, classe) {
     createLine(5 + x, 7 + y, 30 + x, 26 + y, 'linha2', 'svg', classe);
 }
 function valorX(e) {
-    if (returnPositionX_porcentagem(e.pageX) >= 0 && returnPositionX_porcentagem(e.pageX) <= 32) {
+    if (returnPositionX_porcentagem(e.pageX) >= 0 &&
+        returnPositionX_porcentagem(e.pageX) <= 32) {
         return 15;
     }
-    else if (returnPositionX_porcentagem(e.pageX) > 32 && returnPositionX_porcentagem(e.pageX) <= 65) {
+    else if (returnPositionX_porcentagem(e.pageX) > 32 &&
+        returnPositionX_porcentagem(e.pageX) <= 65) {
         return 50;
     }
-    else if (returnPositionX_porcentagem(e.pageX) > 65 && returnPositionX_porcentagem(e.pageX) <= 99) {
+    else if (returnPositionX_porcentagem(e.pageX) > 65 &&
+        returnPositionX_porcentagem(e.pageX) <= 99) {
         return 85;
     }
 }
 function valorY(e) {
-    if (returnPositionY_porcentagem(e.pageY) >= 0 && returnPositionY_porcentagem(e.pageY) <= 30) {
+    if (returnPositionY_porcentagem(e.pageY) >= 0 &&
+        returnPositionY_porcentagem(e.pageY) <= 30) {
         return 15;
     }
-    else if (returnPositionY_porcentagem(e.pageY) >= 31 && returnPositionY_porcentagem(e.pageY) <= 63) {
+    else if (returnPositionY_porcentagem(e.pageY) >= 31 &&
+        returnPositionY_porcentagem(e.pageY) <= 63) {
         return 50;
     }
-    else if (returnPositionY_porcentagem(e.pageY) > 63 && returnPositionY_porcentagem(e.pageY) <= 100) {
+    else if (returnPositionY_porcentagem(e.pageY) > 63 &&
+        returnPositionY_porcentagem(e.pageY) <= 100) {
         return 85;
     }
 }
@@ -197,13 +203,18 @@ function jogar(_vez) {
             });
         }
         else {
+            //vez do computador...
             var i = Math.floor(Math.random() * 3),
+                //linha..
                 j = Math.floor(Math.random() * 3);
+            //coluna...
             if (m_lugarVazio[i][j]) {
                 //se nao estivar preenchido o logar do click...
                 m_lugarVazio[i][j] = false;
+                
                 if (computador == 'c') createCirculo(confereInverso(j), confereInverso(i), 8, 'circulo');
                 else createX(val(confereInverso(j)), val(confereInverso(i)), 'x');
+
                 m_computador[i][j] = true;
                 jogadas++;
 
@@ -213,9 +224,7 @@ function jogar(_vez) {
                     semVencedor = vencedor(m_computador);
                 }
                 if (semVencedor) {
-                    setTimeout(() => {
-                        jogar('jogador');
-                    }, 500);
+                    jogar('jogador');
                 }
                 else resultado(_vez);
             }
@@ -268,7 +277,9 @@ function resultado(_nome) {
     let btn = document.createElement('button');
     btn.setAttribute('id', 'button');
     btn.setAttribute('class', 'div');
-    btn.innerHTML='<a id="novamente" href="index.html">Jogue novamente!</a>';
-    document.getElementById('result').appendChild(btn);
-    
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('onclick', 'window.location="index.html"');
+    btn.innerHTML = 'Jogue novamente.';
+    document.getElementById('text').appendChild(btn);
+
 }

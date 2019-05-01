@@ -16,6 +16,7 @@ line{
 /*classe*/
 .div{
     border-radius: 20px;
+    font-size: 20px;
 }
 .linha{
     stroke-width: 3%;
@@ -56,7 +57,7 @@ line{
     position: absolute;
     background-color: rgb(66, 66, 66);
     width: 80%;
-    height: 80%;
+    height: 70%;
     z-index: 50;
     opacity: .9;
     text-align: center;
@@ -65,11 +66,16 @@ line{
 #text{
     color: rgb(89, 245, 89);
     width: 100%;
-    height: 10%;
+    height: 50%;
     opacity: 1;
     margin-top: 20%;
+    position: absolute;
 }
 #button{
-    width: 20%;
-    height: 10%;
+    width: 50%;
+    height: 20%;
+    position: relative;
+    z-index: 100;
+    font-size: 70%;
+    box-shadow: 3px 3px #888888;
 }
